@@ -1,0 +1,45 @@
+/*Faça um algoritmo que receba N números e mostre positivo, negativo ou zero 
+para cada número.
+*/
+
+package ExerciciosJAVA;
+
+import java.util.Scanner;
+
+public class Exercicio24 {
+
+    public static void main(String[] args) {
+        
+        Scanner leitorScanner = new Scanner (System.in);
+        
+        char continuar = 'S';
+        
+        while (continuar == 'S' || continuar == 's'){
+           
+            System.out.println("Insert a number: ");
+            int number = leitorScanner.nextInt();
+            
+            if (number == 0){
+                
+               System.out.println("This number is zero!");
+        }else {
+                if (number > 0){
+                    
+                    System.out.println("This number is positive!");
+                    
+                }else {
+                    
+                    System.out.println("This number is negative");
+                } 
+                    
+            }
+            System.out.println("Continue? S - Yes | N - No");
+        continuar = leitorScanner.next().charAt(0);
+            }
+        
+        System.out.println("Close program!");
+        
+        
+    }
+    
+}
